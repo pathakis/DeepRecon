@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Unwanted Directories
+.DS_Store
+CNN_Features
+
 # Distribution / packaging
 .Python
 build/
