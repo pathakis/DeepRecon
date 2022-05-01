@@ -1,0 +1,2 @@
+model_checkpoint_path: "Optimal-Param-Model-OrganAMNIST"
+all_model_checkpoint_paths: "Optimal-Param-Model-OrganAMNIST"
