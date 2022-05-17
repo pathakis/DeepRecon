@@ -1,0 +1,2914 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List
+href="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/filelist.xml">
+<link rel=Edit-Time-Data
+href="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Pathak, Ishaan</o:Author>
+  <o:LastAuthor>Pathak, Ishaan</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>1</o:TotalTime>
+  <o:Created>2022-05-17T18:29:00Z</o:Created>
+  <o:LastSaved>2022-05-17T18:29:00Z</o:LastSaved>
+  <o:Pages>14</o:Pages>
+  <o:Words>2490</o:Words>
+  <o:Characters>14196</o:Characters>
+  <o:Lines>118</o:Lines>
+  <o:Paragraphs>33</o:Paragraphs>
+  <o:CharactersWithSpaces>16653</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=dataStoreItem
+href="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/item0001.xml"
+target="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/props002.xml">
+<link rel=themeData
+href="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/themedata.thmx">
+<link rel=colorSchemeMapping
+href="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:"Century Gothic";
+	panose-1:2 11 5 2 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+h1
+	{mso-style-update:auto;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 2";
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;
+	mso-font-kerning:0pt;
+	font-weight:bold;}
+h2
+	{mso-style-update:auto;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 3";
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:.25in;
+	margin-left:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	tab-stops:right 467.5pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	font-variant:small-caps;
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	font-variant:small-caps;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-priority:39;
+	mso-style-next:Normal;
+	margin:0in;
+	line-height:150%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Calibri;
+	mso-bidi-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Header Char";
+	margin:0in;
+	text-indent:.5in;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-priority:99;
+	mso-style-link:"Footer Char";
+	margin:0in;
+	text-indent:.5in;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.25in right 6.5in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	mso-themecolor:hyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	color:black;
+	mso-themecolor:text1;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{mso-style-priority:39;
+	mso-style-qformat:yes;
+	mso-style-parent:"Heading 1";
+	mso-style-next:Normal;
+	margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Header;
+	font-family:"Century Gothic",sans-serif;
+	mso-ascii-font-family:"Century Gothic";
+	mso-hansi-font-family:"Century Gothic";
+	color:black;
+	mso-themecolor:text1;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Footer;
+	font-family:"Century Gothic",sans-serif;
+	mso-ascii-font-family:"Century Gothic";
+	mso-hansi-font-family:"Century Gothic";
+	color:black;
+	mso-themecolor:text1;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	font-family:"Century Gothic",sans-serif;
+	mso-ascii-font-family:"Century Gothic";
+	mso-hansi-font-family:"Century Gothic";
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	font-family:"Century Gothic",sans-serif;
+	mso-ascii-font-family:"Century Gothic";
+	mso-hansi-font-family:"Century Gothic";
+	color:black;
+	mso-themecolor:text1;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") fs;
+	mso-footnote-continuation-separator:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") fcs;
+	mso-endnote-separator:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") es;
+	mso-endnote-continuation-separator:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") ecs;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-even-header:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") eh1;
+	mso-header:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") h1;
+	mso-footer:url("PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/header.html") f1;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:267926858;
+	mso-list-template-ids:-563085304;}
+@list l0:level2
+	{mso-level-start-at:0;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-start-at:0;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-start-at:0;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-start-at:0;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-start-at:0;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-start-at:0;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-start-at:0;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-start-at:0;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1875925404;
+	mso-list-template-ids:298591124;}
+@list l1:level2
+	{mso-level-start-at:0;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-start-at:0;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-start-at:0;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-start-at:0;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-start-at:0;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-start-at:0;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-start-at:0;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-start-at:0;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2064"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="2"/>
+  <o:rules v:ext="edit">
+   <o:r id="V:Rule1" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_16"/>
+   <o:r id="V:Rule2" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_19"/>
+   <o:r id="V:Rule3" type="connector" idref="#Straight_x0020_Arrow_x0020_Connector_x0020_20"/>
+  </o:rules>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='tab-interval:.5in;
+word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin:0in;text-indent:0in;line-height:normal'><span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin:0in;text-indent:0in;line-height:normal'><span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin:0in;text-indent:0in;line-height:normal'><span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin:0in;text-indent:0in;line-height:normal'><span
+style='mso-fareast-font-family:"Times New Roman";color:windowtext'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:16.0pt;line-height:150%'>PET Image Reconstruction Using Deep
+Learning</span><o:p></o:p></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'>Ishaan Pathak</p>
+
+<p class=MsoNormal align=center style='text-align:center'>Michigan State
+University</p>
+
+<p class=MsoNormal align=center style='text-align:center'>April 2022</p>
+
+<br clear=all style='mso-special-character:line-break;page-break-before:always'>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span><![endif]--><a href="#_Toc102322489"><span
+style='mso-no-proof:yes'>Abstract</span><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-tab-count:
+1'>  </span></span><!--[if supportFields]><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-element:
+field-begin'></span> PAGEREF _Toc102322489 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400380039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><a href="#_Toc102322490"><span
+style='mso-no-proof:yes'>Background and Motivation</span><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'><span style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc102322490 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><a href="#_Toc102322491"><span
+style='mso-no-proof:yes'>Methodology</span><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-tab-count:
+1'>  </span></span><!--[if supportFields]><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-element:
+field-begin'></span> PAGEREF _Toc102322491 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322492"><span style='mso-no-proof:yes'>Exploratory
+Data Analysis</span><span style='color:black;mso-themecolor:text1;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322492 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322493"><span style='mso-no-proof:yes'>Filtered
+Back Projection (FBP)</span><span style='color:black;mso-themecolor:text1;
+display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322493 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322494"><span style='mso-no-proof:yes'>Convolutional
+Neural Network (CNN)</span><span style='color:black;mso-themecolor:text1;
+display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322494 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322495"><span style='mso-no-proof:yes'>Hyperparameter
+Tuning</span><span style='color:black;mso-themecolor:text1;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322495 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><a href="#_Toc102322496"><span
+style='mso-no-proof:yes'>Results</span><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-tab-count:
+1'>  </span></span><!--[if supportFields]><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-element:
+field-begin'></span> PAGEREF _Toc102322496 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322497"><span style='mso-no-proof:yes'>Exploratory
+Data Analysis</span><span style='color:black;mso-themecolor:text1;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322497 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322498"><span style='mso-no-proof:yes'>Filtered
+Back Projection (FBP)</span><span style='color:black;mso-themecolor:text1;
+display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322498 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322499"><span style='mso-no-proof:yes'>Convolutional
+Neural Network (CNN)</span><span style='color:black;mso-themecolor:text1;
+display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:
+none'><span style='mso-tab-count:1'> </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322499 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>8<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003400390039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2><a href="#_Toc102322500"><span style='mso-no-proof:yes'>Hyperparameter
+Tuning</span><span style='color:black;mso-themecolor:text1;display:none;
+mso-hide:screen;mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'><span
+style='mso-element:field-begin'></span> PAGEREF _Toc102322500 \h <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes;text-decoration:none;text-underline:none'>10<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003500300030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes;text-decoration:
+none;text-underline:none'><span style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;font-variant:normal !important;color:windowtext;
+font-weight:normal;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><a href="#_Toc102322501"><span
+style='mso-no-proof:yes'>Conclusions and Future Works</span><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'><span style='mso-tab-count:1'>  </span></span><!--[if supportFields]><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc102322501 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>12<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003500300031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoToc1 style='tab-stops:right 467.5pt'><a href="#_Toc102322502"><span
+style='mso-no-proof:yes'>References</span><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-tab-count:
+1'>  </span></span><!--[if supportFields]><span style='color:black;mso-themecolor:
+text1;display:none;mso-hide:screen;mso-no-proof:yes'><span style='mso-element:
+field-begin'></span> PAGEREF _Toc102322502 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:black;mso-themecolor:text1;display:none;mso-hide:screen;
+mso-no-proof:yes'>14<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003100300032003300320032003500300032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:black;
+mso-themecolor:text1;display:none;mso-hide:screen;mso-no-proof:yes'><span
+style='mso-element:field-end'></span></span><![endif]--></a><span
+style='font-size:12.0pt;line-height:150%;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;color:windowtext;text-transform:none;font-weight:
+normal;mso-no-proof:yes;text-decoration:none;text-underline:none'><o:p></o:p></span></p>
+
+<p class=MsoNormal><!--[if supportFields]><span style='mso-element:field-end'></span><![endif]--><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+<o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc102322489">Abstract</a></h1>
+
+<p class=MsoNormal>Neural Networks are a novel technology that have a variety
+of applications in a lot of fields. They are a very powerful modeling tool,
+especially in cases where a perfect mathematical model is difficult to
+establish between the dependent and independent variables. Although traditional
+methods of image reconstruction work well in many situations, the time required
+to complete the reconstruction remains quite high. The aim is to determine
+whether neural networks can allow for better reconstruction times and examine
+whether we also observe a change in the accuracy of the final reconstruction.<span
+style='color:windowtext'><o:p></o:p></span></p>
+
+<h1><o:p>&nbsp;</o:p></h1>
+
+<h1><a name="_Toc102322490">Background and Motivation</a></h1>
+
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Traditional
+Tomographic reconstruction techniques require converting multiple projections
+into images. </span>There are multiple methods for tomographic reconstruction,
+but they suffer from either being too slow or introducing noise and artifacts
+in the reconstruction process. Given that medical imaging scans such as PET and
+CT are performed for diagnostic purposes, both the speed and accuracy of
+reconstruction are significant factors which may have a direct impact on
+patient outcome. It is also quite important to mention that Filtered Back
+Projection is among one of the faster methods of Image Reconstruction, however
+it tends to produce less accurate results compared to algorithms like Ordered
+Subset Expectation Maximization (OSEM). So, the key question that this project
+is looking to answer is: Can deep learning methods provide a faster and more
+accurate reconstruction approach compared to traditional methods like FBP?</p>
+
+<h1><o:p>&nbsp;</o:p></h1>
+
+<h1><a name="_Toc102322491">Methodology</a></h1>
+
+<p class=MsoNormal>There were a variety of methods used throughout this project
+but among some of the most important ones are Filtered Back Projection (FBP),
+Convolutional Neural Networks (CNNs), and Hyperparameter Optimization of CNNs.
+I used the open-source dataset known as <span class=SpellE>MedMNIST</span><sup>[1]</sup>
+(specifically the <span class=SpellE>OrganAMNIST</span>) which contains 58850
+images of dimensions 28px by 28px and has the in-built feature to create
+train/test datasets. The only pre-processing step used was to apply histogram
+equalization which also normalizes the images.</p>
+
+<h2><a name="_Toc102322492">Exploratory Data Analysis</a></h2>
+
+<p class=MsoNormal>Upon importing the images into python, one the first steps
+performed was to make the train/test split and preview some of the images to
+get an idea of what preprocessing steps may be necessary. Next, to get an idea
+of what the FBP reconstructions look like, the Radon Transform is applied to a
+smaller batch of the train set and consequently, the iRadon transform was
+applied to this new batch and the Root Mean Squared Error between the original
+image and the iRadon reconstruction was calculated for this small subset of
+images to get a baseline value for this error.</p>
+
+<h2><a name="_Toc102322493">Filtered Back Projection (FBP)</a></h2>
+
+<p class=MsoNormal>This method can be subdivided into two parts which are: Back
+Projection and Filtration. FBP was one of the first methods developed to reconstruct
+anatomically accurate images from raw CT data. Raw CT data graphically looks
+like several blurred sine waves with different amplitudes and phases which is
+why it is often called a Sinogram. The mathematical operation at the heart of
+this algorithm is the Inverse Radon Transform which solves the back projection
+part of the problem. To complete the filtering part, a ‘ramp filter’ is applied
+to the inverse radon function which, in layman’s terms, is written in a way
+that attenuates high frequency features from the reconstructed image. The FBP
+algorithm is implemented using the scikit-image library’s built-in function
+known as iRadon. An example of the iRadon function in action is shown below:</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="Text_x0020_Box_x0020_3" o:spid="_x0000_s2063"
+ type="#_x0000_t202" style='position:absolute;left:0;text-align:left;
+ margin-left:292.6pt;margin-top:21pt;width:136.05pt;height:99.1pt;
+ text-indent:0;z-index:251659264;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+AA==
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 1<sup>[2]</sup>: This figure shows the Sinogram
+    (like the raw data from a scanner) and the on the right is the reconstructed
+    image produced using the iRadon function.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251659264'><span style='left:0px;position:absolute;left:283px;
+top:-552px;width:140px;height:103px'><img width=140 height=103
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image001.png"
+alt="Text Box: Figure 1[2]: This figure shows the Sinogram (like the raw data from a scanner) and the on the right is the reconstructed image produced using the iRadon function."
+v:shapes="Text_x0020_Box_x0020_3"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1039" type="#_x0000_t75"
+ alt="Chart&#10;&#10;Description automatically generated with medium confidence"
+ style='width:247pt;height:137pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="yellow pure" o:borderleftcolor="yellow pure"
+ o:borderbottomcolor="yellow pure" o:borderrightcolor="yellow pure">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image002.png"
+  o:title="Chart&#10;&#10;Description automatically generated with medium confidence"
+  croptop="3466f" cropbottom="2290f" cropleft="1178f" cropright="1596f"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=249 height=139
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image003.png"
+alt="Chart&#10;&#10;Description automatically generated with medium confidence"
+v:shapes="Picture_x0020_2"><![endif]></span></p>
+
+<p class=MsoNormal>The same scikit-image class that contains the iRadon
+function also contains the Radon function which I used to ‘simulate’ the sinograms
+corresponding to each training and testing image. Although, each image in the
+original dataset has an appropriate label attached to it, to achieve the end
+goal of this project, they are of no use. The Radon function is used to
+generate the Input Data for the CNN and the original images are used as ‘ground
+truth’ for training and evaluation.</p>
+
+<h2><a name="_Toc102322494">Convolutional Neural Network (CNN)</a></h2>
+
+<p class=MsoNormal>As the name suggests, a convolutional neural network is a
+type of Neural Network which makes use of Convolutional Layers in its
+architecture. The package TensorFlow was used to develop and implement the
+Neural Network architecture in Python. A convolutional layer consists of a user-defined
+number of ‘kernels’ whose size is also determined by the user. Each kernel can
+be visualized as being a matrix and these matrices are iteratively multiplied
+with similarly sized sub-sections of the image one at a time and moved by an
+amount decided by the ‘stride’ factor defined by the user. Each filter is
+passed over the image to produce a new array/tensor and the size of this
+array/tensor depends on the arguments mentioned above. </p>
+
+<p class=MsoNormal>In the model used for this project, the first layer of the
+first draft of the Neural Network consisted of a function call that specified a
+kernel size of 2x2 with a total of 54 kernels in this layer. This means that
+the output at this layer is 54 arrays of size 28px by 28px. The activation
+function used for this layer was ‘ReLU’ which stands for Rectified Linear Unit
+and the idea behind this activation function is that it leaves all the positive
+values unchanged, while mapping all the negative values to 0. The architecture
+of the model used in this project is as follows:</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_8" o:spid="_x0000_i1038" type="#_x0000_t75" alt="Table&#10;&#10;Description automatically generated"
+ style='width:347pt;height:260pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image004.png"
+  o:title="Table&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=349 height=262
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image005.png"
+alt="Table&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_8"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc102322495">Hyperparameter Tuning</a></h2>
+
+<p class=MsoNormal>Once the initial model was designed and trained, the next
+logical step was to alter some hyperparameters in the model in hopes of
+potentially encountering a model with fewer parameters/nodes and comparable or
+better results. Even though it may seem like the model shown above is quite
+small, there are way too many hyperparameters to optimize in a time efficient
+manner. So, it was necessary to apply some sort of ‘best guess estimate’ to
+decide which specific hyperparameters were best to tune. So according to my
+intuition, one of the goals of this project is to see whether Neural Networks
+can perform image reconstruction faster than FBP.</p>
+
+<p class=MsoNormal>I decided to focus on seeing if the number of kernels in the
+two convolutional layers could be reduced. The reason behind this choice was
+that the fewer the number of convolutional kernels, the fewer the mathematical
+operation this model would require to produce a reconstruction. Moreover, since
+the second convolutional layer’s outputs are flattened, and connected to a
+Dense Layer of 724 nodes, reducing the number of kernels by 1 in this
+convolution step means a reduction of roughly 150,000 or so trainable
+parameters and the fewer the number of trainable parameters, the faster a model
+can be trained.</p>
+
+<p class=MsoNormal>The tuning process was performed using the Bayesian
+Optimization function in the keras_tuner package. The search for optimal hyperparameters
+was done for over 20 trials and the objective was to keep the mean squared
+error of this model as low as possible while potentially removing redundant
+convolutional kernels. Upon receiving the optimal hyperparameters from this
+function, a new model was created with those values for the convolution kernels
+and the model was retrained on the same data for the same number of epochs as
+the original model so that the two could be directly compared with one another.</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc102322496">Results</a></h1>
+
+<h2><a name="_Toc102322497">Exploratory Data Analysis</a></h2>
+
+<p class=MsoNormal>One of the key findings when initially exploring the data
+was that none of the images were normalized. Moreover, a lot of the images had
+highly varying intensity values (meaning, some had bright spots with a maximum
+absolute intensity value close to 1 whereas, the same value was a mere 0.6 in
+some other image. This would give the model another parameter that it’d have to
+predict correctly in every reconstruction which would not only increase the
+number of epochs needed to train the model to a sufficiently low reconstruction
+error, but it may also be require more convolutional layers to perfect.
+Fortunately, this problem was rather easily countered by implementing histogram
+equalization when generating the simulated sinograms as well as when applying
+circular masks to the original image.</p>
+
+<h2><a name="_Toc102322498">Filtered Back Projection (FBP)</a></h2>
+
+<p class=MsoNormal>Circular Masks were also applied to the original image
+because the FBP algorithm can only reconstruct circular images because the
+method relies on back-projecting images from the polar coordinate domain. Next,
+the small sample of images from the training set mentioned in the Methodology
+section were used to get an idea of what the rms error of the FBP
+reconstructions would be. The results of this analysis are shown in the figure
+below.</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:rect id="Rectangle_x0020_14" o:spid="_x0000_s2062"
+ style='position:absolute;left:0;text-align:left;margin-left:1pt;margin-top:15.6pt;
+ width:468.35pt;height:366pt;z-index:-251658241;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:middle'
+ o:gfxdata="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
+BAAEAPMAAADsBQAAAAA=
+" fillcolor="white [3212]" strokecolor="black [3213]" strokeweight="1pt"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:relative;z-index:-1895825409'><span
+style='left:0px;position:absolute;left:-9px;top:-1060px;width:468px;height:
+366px'><img width=468 height=366
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image006.png"
+v:shapes="Rectangle_x0020_14"></span></span><![endif]></p>
+
+<p class=MsoNoSpacing><!--[if gte vml 1]><v:shapetype id="_x0000_t32"
+ coordsize="21600,21600" o:spt="32" o:oned="t" path="m,l21600,21600e" filled="f">
+ <v:path arrowok="t" fillok="f" o:connecttype="none"/>
+ <o:lock v:ext="edit" shapetype="t"/>
+</v:shapetype><v:shape id="Straight_x0020_Arrow_x0020_Connector_x0020_20"
+ o:spid="_x0000_s2061" type="#_x0000_t32" style='position:absolute;
+ margin-left:377.5pt;margin-top:133.85pt;width:11.55pt;height:54.85pt;
+ z-index:251664384;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin' o:gfxdata="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
+" strokecolor="black [3200]" strokeweight=".5pt">
+ <v:stroke endarrow="block" joinstyle="miter"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251664384'><span style='position:absolute;left:368px;
+top:-950px;width:11px;height:55px'><img width=11 height=55
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image007.png"
+v:shapes="Straight_x0020_Arrow_x0020_Connector_x0020_20"></span></span><![endif]><!--[if gte vml 1]><v:shape
+ id="Straight_x0020_Arrow_x0020_Connector_x0020_19" o:spid="_x0000_s2060"
+ type="#_x0000_t32" style='position:absolute;margin-left:234.5pt;margin-top:133.85pt;
+ width:0;height:54.85pt;z-index:251662336;visibility:visible;mso-wrap-style:square;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text' o:gfxdata="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
+" strokecolor="black [3200]" strokeweight=".5pt">
+ <v:stroke endarrow="block" joinstyle="miter"/>
+</v:shape><![endif]--><!--[if gte vml 1]><v:shape id="Straight_x0020_Arrow_x0020_Connector_x0020_16"
+ o:spid="_x0000_s2059" type="#_x0000_t32" style='position:absolute;
+ margin-left:80.3pt;margin-top:133.85pt;width:11.9pt;height:54.85pt;flip:x;
+ z-index:251661312;visibility:visible;mso-wrap-style:square;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-height-percent:0;mso-height-relative:margin' o:gfxdata="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
+" strokecolor="black [3200]" strokeweight=".5pt">
+ <v:stroke endarrow="block" joinstyle="miter"/>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251661312'><span style='position:absolute;left:70px;
+top:-950px;width:12px;height:55px'><img width=12 height=55
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image008.png"
+v:shapes="Straight_x0020_Arrow_x0020_Connector_x0020_16"></span></span><![endif]><span
+style='mso-spacerun:yes'>     </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_10" o:spid="_x0000_i1037" type="#_x0000_t75" alt="A picture containing text, black, white&#10;&#10;Description automatically generated"
+ style='width:142pt;height:138pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image009.png"
+  o:title="A picture containing text, black, white&#10;&#10;Description automatically generated"
+  croptop="1829f"/>
+</v:shape><![endif]--><![if !vml]><img width=142 height=138
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image010.png"
+alt="A picture containing text, black, white&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_10"><![endif]><!--[if gte vml 1]><v:shape id="Picture_x0020_11"
+ o:spid="_x0000_i1036" type="#_x0000_t75" alt="A picture containing text, crossword puzzle&#10;&#10;Description automatically generated"
+ style='width:140pt;height:138pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image011.png"
+  o:title="A picture containing text, crossword puzzle&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img width=140 height=138
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image011.png"
+alt="A picture containing text, crossword puzzle&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_11"><![endif]></span><span
+style='mso-spacerun:yes'>  </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_12" o:spid="_x0000_i1035" type="#_x0000_t75" alt="A picture containing chart&#10;&#10;Description automatically generated"
+ style='width:143pt;height:138pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image012.png"
+  o:title="A picture containing chart&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img width=143 height=138
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image012.png"
+alt="A picture containing chart&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_12"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNoSpacing><span style='mso-spacerun:yes'>     </span><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_13"
+ o:spid="_x0000_i1034" type="#_x0000_t75" alt="A picture containing text, device, meter, different&#10;&#10;Description automatically generated"
+ style='width:452pt;height:149pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image013.png"
+  o:title="A picture containing text, device, meter, different&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img width=452 height=149
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image013.png"
+alt="A picture containing text, device, meter, different&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_13"><![endif]></span></p>
+
+<p class=MsoNormal style='text-indent:0in'><!--[if gte vml 1]><v:rect id="Rectangle_x0020_15"
+ o:spid="_x0000_s2058" style='position:absolute;margin-left:23.75pt;
+ margin-top:1.1pt;width:420.45pt;height:29.05pt;z-index:-251656192;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;
+ mso-height-relative:margin;v-text-anchor:middle' o:gfxdata="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
+AADmBQAAAAA=
+" fillcolor="white [3212]" strokecolor="black [3213]" strokeweight="1pt"/><![endif]--><![if !vml]><span
+style='mso-ignore:vglayout;position:relative;z-index:-1895823360'><span
+style='position:absolute;left:14px;top:-1192px;width:420px;height:29px'><img
+width=420 height=29
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image014.png"
+v:shapes="Rectangle_x0020_15"></span></span><![endif]><span style='font-size:
+11.0pt;line-height:150%'><span style='mso-spacerun:yes'>            </span>Figure
+2: Three of the Original Images (w/o Preprocessing) and their FBP
+Reconstructions.<o:p></o:p></span></p>
+
+<p class=MsoNoSpacing><!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_22"
+ o:spid="_x0000_s2057" type="#_x0000_t202" style='position:absolute;
+ margin-left:317.05pt;margin-top:93.15pt;width:136.05pt;height:99.1pt;
+ z-index:251666432;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+AAA=
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 3: The RMSE measurements of some of the
+    initial FBP reconstructions vs. the pre-processed version of the original.
+    (Shown for proof of concept).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251666432'><span style='position:absolute;left:307px;
+top:-1110px;width:140px;height:103px'><img width=140 height=103
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image015.png"
+alt="Text Box: Figure 3: The RMSE measurements of some of the initial FBP reconstructions vs. the pre-processed version of the original. (Shown for proof of concept)."
+v:shapes="Text_x0020_Box_x0020_22"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_21"
+ o:spid="_x0000_i1033" type="#_x0000_t75" alt="Calendar&#10;&#10;Description automatically generated"
+ style='width:303pt;height:303pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="yellow pure" o:borderleftcolor="yellow pure"
+ o:borderbottomcolor="yellow pure" o:borderrightcolor="yellow pure">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image016.png"
+  o:title="Calendar&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=305 height=305
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image017.png"
+alt="Calendar&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_21"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h2><a name="_Toc102322499">Convolutional Neural Network (CNN)</a></h2>
+
+<p class=MsoNormal>The Neural Network was trained for 10 epochs and the Mean
+Squared Error was used as the ‘loss’ measure during training and the standard ‘<span
+class=SpellE>adam</span>’ optimizer was used with the default learning rate of
+0.001. The Validation Loss seemed to have relatively flattened out after 10
+epochs which is where the model was stopped during training to avoid
+overfitting the model to the training set.</p>
+
+<p class=MsoNoSpacing><!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_24"
+ o:spid="_x0000_s2056" type="#_x0000_t202" style='position:absolute;
+ margin-left:338.2pt;margin-top:44.6pt;width:136.05pt;height:74pt;z-index:251668480;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;
+ mso-height-relative:margin;v-text-anchor:top' o:gfxdata="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
+AAAAAA==
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 4: The MSE measurements of the Training and
+    Validation sets at the end of each epoch.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251668480'><span style='position:absolute;left:328px;
+top:-1304px;width:140px;height:78px'><img width=140 height=78
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image018.png"
+alt="Text Box: Figure 4: The MSE measurements of the Training and Validation sets at the end of each epoch."
+v:shapes="Text_x0020_Box_x0020_24"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_23"
+ o:spid="_x0000_i1032" type="#_x0000_t75" alt="Chart, line chart&#10;&#10;Description automatically generated"
+ style='width:331pt;height:164pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image019.png"
+  o:title="Chart, line chart&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=333 height=166
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image020.png"
+alt="Chart, line chart&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_23"><![endif]></span></p>
+
+<p class=MsoNormal>Upon training the Neural Network, its performance was
+evaluated against the FBP algorithm to measure how the speed of reconstruction
+of the entire test set as well the average MSE for these reconstructions by
+these two algorithms stacked against one another. Although, it is unclear what
+the Amortized Time Complexities of either of these algorithms may be, if we
+proceed with the assumption that it takes the same amount of time to
+reconstruct a 28px-by-28px image, over the course of thousands of
+reconstructions, the curve would be perfectly linear.</p>
+
+<p class=MsoNormal>It was found that the Neural Network completed the
+reconstruction in ~1.37 seconds whereas, FBP took ~3.89 seconds to finish the
+same task which is an improvement by a factor of ~2.83 times in favor of the
+Neural Network.</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_28"
+ o:spid="_x0000_s2055" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:270.35pt;margin-top:196.05pt;width:136.05pt;
+ height:74pt;text-indent:0;z-index:251672576;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+BQAAAAA=
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 6: The MSE measurements of the FBP<span
+    style='mso-spacerun:yes'>  </span>Reconstructions (blue), and Neural
+    Network Reconstructions (orange).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251672576'><span style='left:0px;position:absolute;left:260px;
+top:-1257px;width:140px;height:78px'><img width=140 height=78
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image021.png"
+alt="Text Box: Figure 6: The MSE measurements of the FBP  Reconstructions (blue), and Neural Network Reconstructions (orange)."
+v:shapes="Text_x0020_Box_x0020_28"></span></span><![endif]><!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_27" o:spid="_x0000_s2054" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:65.75pt;
+ margin-top:195.8pt;width:136.05pt;height:74pt;text-indent:0;z-index:251670528;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;
+ mso-height-relative:margin;v-text-anchor:top' o:gfxdata="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
+BQAAAAA=
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 5: The reconstruction times for both the FBP
+    method<span style='mso-spacerun:yes'>  </span>(blue) vs. the Neural Network
+    (red).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251670528'><span style='left:0px;position:absolute;left:56px;
+top:-1257px;width:140px;height:78px'><img width=140 height=78
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image022.png"
+alt="Text Box: Figure 5: The reconstruction times for both the FBP method  (blue) vs. the Neural Network (red)."
+v:shapes="Text_x0020_Box_x0020_27"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_25"
+ o:spid="_x0000_i1031" type="#_x0000_t75" alt="Chart, line chart&#10;&#10;Description automatically generated"
+ style='width:192pt;height:189pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="yellow pure" o:borderleftcolor="yellow pure"
+ o:borderbottomcolor="yellow pure" o:borderrightcolor="yellow pure">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image023.png"
+  o:title="Chart, line chart&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=194 height=191
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image024.png"
+alt="Chart, line chart&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_25"><![endif]></span><span
+style='mso-spacerun:yes'>  </span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_26" o:spid="_x0000_i1030" type="#_x0000_t75" alt="Chart&#10;&#10;Description automatically generated with medium confidence"
+ style='width:196pt;height:189pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image025.png"
+  o:title="Chart&#10;&#10;Description automatically generated with medium confidence"
+  croptop="697f"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=198 height=191
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image026.png"
+alt="Chart&#10;&#10;Description automatically generated with medium confidence"
+v:shapes="Picture_x0020_26"><![endif]></span></p>
+
+<p class=MsoNoSpacing><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Moreover, the Mean Squared Error in the reconstructions made
+by the Neural Network (average of ~0.097 for the whole set) were also
+drastically better than its FBP counterpart (average of ~0.600 for the whole
+set), marking an improvement by a factor of ~6.17 times in favor of the Neural
+Network. Not only this, looking at the reconstructions visually told much the
+same story as the average MSE values as it seemed that the Neural Network’s
+reconstruction was able to recreate some of the slight nuances in the Original
+Images more accurately than the FBP algorithm could. A side-by-side comparison
+of some of these reconstructions is shown below although visual confirmation is
+a less rigorous method of validation, it is still worth looking at.</p>
+
+<p class=MsoNoSpacing align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_29"
+ o:spid="_x0000_i1029" type="#_x0000_t75" alt="A picture containing green&#10;&#10;Description automatically generated"
+ style='width:468pt;height:321pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image027.png"
+  o:title="A picture containing green&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=470 height=323
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image028.png"
+alt="A picture containing green&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_29"><![endif]></span></p>
+
+<p class=MsoNoSpacing align=center style='text-align:center'><!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_30" o:spid="_x0000_s2053" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:71.3pt;
+ margin-top:2.9pt;width:314.8pt;height:35.3pt;z-index:251674624;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing align=center style='text-align:center'>Figure 7: A
+    direct visual comparison between the two methods of reconstruction
+    (compared column-wise).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251674624'><span style='left:0px;position:absolute;left:61px;
+top:-1697px;width:319px;height:39px'><img width=319 height=39
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image029.png"
+alt="Text Box: Figure 7: A direct visual comparison between the two methods of reconstruction (compared column-wise)."
+v:shapes="Text_x0020_Box_x0020_30"></span></span><![endif]><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNoSpacing align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNoSpacing align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNoSpacing align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<br style='mso-ignore:vglayout' clear=ALL>
+
+<p class=MsoNormal>Based on the results obtained above, it seems as if the
+neural Network based approach at Image Reconstruction does quite well that its
+FBP counterpart in this setting. However, determining the generalizability of a
+model trained in this fashion remains to be seen.</p>
+
+<h2><a name="_Toc102322500">Hyperparameter Tuning</a></h2>
+
+<p class=MsoNormal>Now that we had some good results with a model that
+performed quite well when compared to FBP, the next step was to perform some
+Hyperparameter tuning to see if any of the convolutional kernels in the two
+Convolution layers were redundant and could be dropped. As mentioned before,
+doing so (especially in the second convolutional layer) could theoretically lead
+to faster training as well as reconstruction times. So, a new model was set up
+in a way that the keras_tuner could choose a number between 27 and 54 for the
+number of kernels in the first convolutional layer, and similarly, a number
+between 10 and 27 for the second convolutional layer. It was allowed to change
+these numbers by a step size of 2 per iteration.</p>
+
+<p class=MsoNormal>A new model was then created, trained, and tested with a
+variety of different initial conditions and the Bayesian Optimizer was used to
+converge towards the solution that produced the most accurate results. It took
+a while for the tuner to finish generating all the results but by the last
+iteration, it had settled on the values of 53 and 26 for the number of
+convolutional kernels which was extremely close to the original model which
+used 54 and 28 kernels for the first and second convolutional layers
+respectively. Although these new hyperparameters were still worth examining
+because the second layer had returned 2 fewer kernels which had reduced the
+number of trainable parameters in this new ‘Optimal Model’ to ~4 million which
+was lesser by nearly ~300,000. The ‘Optimized’ model architecture is shown below:</p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_33"
+ o:spid="_x0000_i1028" type="#_x0000_t75" alt="Table&#10;&#10;Description automatically generated"
+ style='width:319pt;height:236pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image030.png"
+  o:title="Table&#10;&#10;Description automatically generated"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=321 height=238
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image031.png"
+alt="Table&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_33"><![endif]></span></p>
+
+<p class=MsoNormal>Upon training this new ‘Optimal Model’ for 10 epochs, a very
+similar curve for the Validation Loss by epoch was obtained (compared to the
+original) as shown below:</p>
+
+<p class=MsoNoSpacing><!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_32"
+ o:spid="_x0000_s2052" type="#_x0000_t202" style='position:absolute;
+ margin-left:338.4pt;margin-top:35.2pt;width:136.05pt;height:83.8pt;z-index:251676672;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;
+ mso-height-relative:margin;v-text-anchor:top' o:gfxdata="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
+qwUAAAAA
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 9: The MSE measurements of the Validation sets
+    at the end of each epoch for the Original and ‘Optimized’ Models.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251676672'><span style='position:absolute;left:328px;
+top:-1898px;width:140px;height:87px'><img width=140 height=87
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image032.png"
+alt="Text Box: Figure 9: The MSE measurements of the Validation sets at the end of each epoch for the Original and ‘Optimized’ Models."
+v:shapes="Text_x0020_Box_x0020_32"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_31"
+ o:spid="_x0000_i1027" type="#_x0000_t75" alt="Chart, line chart&#10;&#10;Description automatically generated"
+ style='width:334pt;height:153pt;visibility:visible;mso-wrap-style:square'
+ o:bordertopcolor="black" o:borderleftcolor="black" o:borderbottomcolor="black"
+ o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image033.png"
+  o:title="Chart, line chart&#10;&#10;Description automatically generated"
+  croptop="3450f"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=336 height=155
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image034.png"
+alt="Chart, line chart&#10;&#10;Description automatically generated" v:shapes="Picture_x0020_31"><![endif]></span><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>It was also observed that despite the obvious reduction in
+the total number of trainable parameters, the new ‘Optimized’ Model performed
+worse in terms of the time required to complete the reconstruction as well as
+the MSE of these reconstructions:</p>
+
+<p class=MsoNormal><!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_34"
+ o:spid="_x0000_s2051" type="#_x0000_t202" style='position:absolute;left:0;
+ text-align:left;margin-left:270.35pt;margin-top:196.05pt;width:136.05pt;
+ height:74pt;text-indent:0;z-index:251679744;visibility:visible;
+ mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;
+ mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+AAAA
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 11: The MSE measurements of the Optimized
+    Model (blue), and the Original Model (Red).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251679744'><span style='left:0px;position:absolute;left:260px;
+top:-1809px;width:140px;height:78px'><img width=140 height=78
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image035.png"
+alt="Text Box: Figure 11: The MSE measurements of the Optimized Model (blue), and the Original Model (Red)."
+v:shapes="Text_x0020_Box_x0020_34"></span></span><![endif]><!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_35" o:spid="_x0000_s2050" type="#_x0000_t202"
+ style='position:absolute;left:0;text-align:left;margin-left:65.75pt;
+ margin-top:195.8pt;width:136.05pt;height:74pt;text-indent:0;z-index:251678720;
+ visibility:visible;mso-wrap-style:square;mso-width-percent:0;
+ mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:text;
+ mso-width-percent:0;mso-height-percent:0;mso-width-relative:margin;
+ mso-height-relative:margin;v-text-anchor:top' o:gfxdata="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
+BQAAAAA=
+" fillcolor="white [3201]" strokeweight="1pt">
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td><![endif]>
+    <div>
+    <p class=MsoNoSpacing>Figure 10: The reconstruction times for both the Optimized
+    Model<span style='mso-spacerun:yes'>  </span>(blue) and the Original Model (red).</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  <![endif]></v:textbox>
+</v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout;position:
+relative;z-index:251678720'><span style='left:0px;position:absolute;left:56px;
+top:-1809px;width:140px;height:78px'><img width=140 height=78
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image036.png"
+alt="Text Box: Figure 10: The reconstruction times for both the Optimized Model  (blue) and the Original Model (red)."
+v:shapes="Text_x0020_Box_x0020_35"></span></span><![endif]><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_36"
+ o:spid="_x0000_i1026" type="#_x0000_t75" style='width:194pt;height:190pt;
+ visibility:visible;mso-wrap-style:square' o:bordertopcolor="yellow pure"
+ o:borderleftcolor="yellow pure" o:borderbottomcolor="yellow pure"
+ o:borderrightcolor="yellow pure">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image037.png"
+  o:title=""/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=196 height=192
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image038.png"
+v:shapes="Picture_x0020_36"><![endif]></span><span style='mso-spacerun:yes'> 
+</span><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_37"
+ o:spid="_x0000_i1025" type="#_x0000_t75" style='width:198pt;height:190pt;
+ visibility:visible;mso-wrap-style:square' o:bordertopcolor="black"
+ o:borderleftcolor="black" o:borderbottomcolor="black" o:borderrightcolor="black">
+ <v:imagedata src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image039.png"
+  o:title="" croptop="651f" cropbottom="651f"/>
+ <w:bordertop type="single" width="8"/>
+ <w:borderleft type="single" width="8"/>
+ <w:borderbottom type="single" width="8"/>
+ <w:borderright type="single" width="8"/>
+</v:shape><![endif]--><![if !vml]><img width=200 height=192
+src="PET%20Image%20Reconstruction%20Using%20Deep%20Learning.fld/image040.png"
+v:shapes="Picture_x0020_37"><![endif]></span></p>
+
+<p class=MsoNoSpacing><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>Although it was anticipated that the ‘Optimized’ Model would
+perform slightly better or roughly the same as the original model at the
+reconstruction task, what these results show us is the fact that even the
+slightest alterations to model parameters can lead to drastically different
+results. In this case, the Optimized Model was ~1.70 times slower and ~2.62
+times less accurate than the original model. This also goes to show that the
+assumptions made about the relationship between the number of convolutional filters,
+the number of trainable parameters and the time taken to finish the
+reconstruction were most likely incorrect. Moreover, none of the convolutional
+filters in the original model were redundant and reducing them in either layer
+would lead to a worse accuracy score (since the Bayesian optimizer started from
+the lowest number of kernels available in the function and converged to a
+higher value towards the last few trials).</p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc102322501">Conclusions and Future Works</a></h1>
+
+<p class=MsoNormal>Finally, to wrap things up, this project has been extremely
+helpful in allowing me to understand and implement complex topics related to
+Neural Network architecture design and optimization. The initial Neural Network
+outperformed FBP which neatly answered the initial question posed in this
+project, however, it remains to be seen whether this model would be universally
+applicable in a clinical setting or not. More testing in a relevant setting
+would need to be done to determine this universality. Even though the
+Optimization results were the opposite of what was to be expected, they still
+managed to show that some of the initial estimations of the complex
+relationships between hyperparameters and the time and accuracy of
+reconstruction may have been incorrect and needs a much closer evaluation. In
+the same vein, more tuning and optimization of some other hyperparameters may
+return better results.</p>
+
+<h1><o:p>&nbsp;</o:p></h1>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;color:black;mso-themecolor:text1;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br
+clear=all style='mso-special-character:line-break;page-break-before:always'>
+</span>
+
+<p class=MsoNormal style='margin:0in;text-indent:0in;line-height:normal'><o:p>&nbsp;</o:p></p>
+
+<h1><a name="_Toc102322502">References</a></h1>
+
+<p class=MsoNormal><sup>[1]</sup><span style='background:white'> <span
+class=SpellE>Xuanang</span> Xu, <span class=SpellE>Fugen</span> Zhou, et al.,
+&quot;Efficient multiple organ localization in CT image using 3d region
+proposal network,&quot; IEEE Transactions on Medical Imaging, vol. 38, no. 8,
+pp. 1885–1898, 2019.<o:p></o:p></span></p>
+
+<p class=MsoNormal><sup><span style='background:white'>[2]</span></sup><span
+style='background:white'> Van der Walt, S., Schonberger, Johannes L,
+Nunez-Iglesias, J., Boulogne, <span class=SpellE>Franccois</span>, Warner, J.
+D., <span class=SpellE>Yager</span>, N., … Yu, T. (2014). scikit-image: image
+processing in Python.&nbsp;</span><span class=SpellE><i>PeerJ</i></span><span
+style='background:white'>,&nbsp;</span><i>2</i><span style='background:white'>,
+e453. [</span><a
+href="https://scikit-image.org/docs/stable/auto_examples/transform/plot_radon_transform.html#id5"><span
+style='background:white'>URL</span></a><span style='background:white'>]<o:p></o:p></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>
